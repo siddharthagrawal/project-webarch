@@ -55,6 +55,7 @@ def wiki_put():
 @app.route('/short/<shortkey>', methods=['GET'])
 def short_get(shortkey):
     """Redirects to specified url."""
+    shortkey = str(shortkey)
     destination = db.get(shortkey, 'http://en.wikipedia.org')
     app.logger.debug("Redirecting to " + destination)
     return flask.redirect(destination)
@@ -64,9 +65,12 @@ def shorts_put():
     """Set or update the URL to which this resource redirects to. Uses the
     `url` key to set the redirect destination."""
     url = request.form.get('url', 'http://en.wikipedia.org')
-    urlkey = request.form.get('urlkey', '404')
+    urlkey = str(request.form.get('urlkey', '404'))
     db[urlkey] = url
-    return "Stored url => " + url + " with key " + urlkey
+    return flask.render_template(
+            'shortsresponse.html',
+            url=url,
+            urlkey=urlkey)    
 
 @app.route("/shorts", methods=['GET'])
 def shorts_get():

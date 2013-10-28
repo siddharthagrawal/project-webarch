@@ -56,9 +56,13 @@ def wiki_put():
 def short_get(shortkey):
     """Redirects to specified url."""
     shortkey = str(shortkey)
-    destination = db.get(shortkey, 'http://en.wikipedia.org')
-    app.logger.debug("Redirecting to " + destination)
-    return flask.redirect(destination)
+    destination = db.get(shortkey)
+    if destination is None:
+        return flask.render_template(
+                '404.html'), 404
+    else:
+        app.logger.debug("Redirecting to " + destination)
+        return flask.redirect(destination)
 
 @app.route("/shorts", methods=['PUT', 'POST'])
 def shorts_put():

@@ -1,15 +1,20 @@
 <!DOCTYPE html/>
 <html>
-	<head>
-		<title>Shorts response</title>
-	</head>
-	<body>
-		<h2>Congratulations!</h2>
-		<p>You stored the following shortner:</p>
-		<ul>
-			<li>URL: {{url}}</li>
-			<li>URL Key: {{urlkey}}</li>
-		</ul>
-	</body>
+        <head>
+                <title>Shorts response</title>
+                <link rel="stylesheet" type="text/css" 
+href="static/css/projectcss.css">
+        </head>
+        <body>
+        	<div>
+                <h2>Congratulations!</h2>
+                <fieldset id="url-result">
+					<legend>Shortener Result</legend>
+                    <p>URL: {{url}}</p>
+                    <p>URL Key: {{urlkey}}</p>
+        		</fieldset>
+    
+        </div>   
+        </body>
 </html>
 

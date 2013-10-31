@@ -80,7 +80,7 @@ def shorts_put():
 def shorts_get():
     "Display the page"
     return flask.render_template(
-            'shorts.html')
+            'home.html')
 ###
 # i253 Resource:
 # Information on the i253 class. Can be parameterized with `relationship`,

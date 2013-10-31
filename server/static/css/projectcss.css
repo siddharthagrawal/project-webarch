@@ -1,0 +1,65 @@
+body {
+	background-color: #DDD;
+	}
+.wrapper, .submit {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+form {
+	width: 100%;
+}
+
+fieldset {
+	background-color: rgb(243, 243, 243);
+	border: 1px solid rgb(158, 159, 224);
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	display: block;
+}
+
+legend {
+	background-color: #333;
+	color: #FFF;
+	padding: 3px 0px;
+	text-indent: 5px;
+	width: 100%;
+	text-align: center
+}
+
+/* Label styles */
+label {
+	clear: left;
+	display: block;
+	float: left;
+	font-size: 0.9em;
+	margin: 7px 4% 7px 5px;
+	width: 100%
+}
+
+/* Input control styles */
+input {
+	display: block;
+	text-align: center;
+	float: left;
+	font-size: 3em;
+	margin: 3px 0px;
+	width: 100%;
+	height: 70px;
+}
+
+input[type="submit"] {
+	background-color: rgb(243, 243, 243);	
+}
+
+/* Validation styles */
+input:focus, select:focus, textarea:focus {
+	background-color: rgb(220, 255, 220);
+}
+

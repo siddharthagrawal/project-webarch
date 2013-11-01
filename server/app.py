@@ -84,7 +84,7 @@ def shorts_get():
 ###
 # i253 Resource:
 # Information on the i253 class. Can be parameterized with `relationship`,
-# `name`, and `adjective` information
+# `name`, and `adjective` information.
 #
 # TODO: The representation for this resource is broken. Fix it!
 # Set the correct MIME type to be able to view the image in your browser

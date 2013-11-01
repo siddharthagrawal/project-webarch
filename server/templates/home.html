@@ -7,61 +7,61 @@
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-		<div class="wrapper">
-			<h1>The Cooler Bitly: Keeping Things <em>Short</em> and <em>Simple</em></h1>
-			<form action="shorts" method="post" id="bitly" onsubmit="return validateForm();">
-				<fieldset id="url-field">
-					<legend>URL of Interest</legend>
-					<label for="url">
-						Enter Url You would like Shortened:
-					</label>
-					<input type="text" name="url" id="url">
-				</fieldset>
-				<fieldset id="urlkey-field">
-					<legend>Short Keyword</legend>
-					<label for="urlkey">
-						What do you want to 
-shorten it to?
-					</label>
-					<input type="text" name="urlkey" id="urlkey">
-				</fieldset>
-				<fieldset id="submit-field">
-					<input type="submit" 
-value="Shorten" class="submit">
-				</fieldset>
-			</form>
-		</div>
-		<script 
+	<div class="wrapper">
+	    <!-- <h1>The Cooler Bitly: Keeping Things <em>Short</em> 
+                   and <em>Simple</em></h1> -->
+            <div class="header">
+                <img src="http://www.leadliaison.com/wp-content/uploads/2013/09/marketing-automation-shortens-sales-cycles.jpg" id="logo" alt="Shorten it.">
+                <h1>Keeping it <em>Short</em> & <em>Simple</em>!</h1>
+            </div>
+            <div class="content">
+	    <form action="shorts" method="post" id="urlform" 
+                     onsubmit="return validateForm();">
+		<fieldset id="url-field">
+		    <legend>URL of Interest</legend>
+		    <label for="url">
+		    Enter Url You would like Shortened:
+		    </label>
+		    <input type="text" name="url" id="url">
+               </fieldset>
+               <fieldset id="keyword-field">
+		    <legend>Short Keyword</legend>
+		    <label for="urlkey">
+		    What do you want to shorten it to?
+		    </label>
+		    <input type="text" name="urlkey" id="urlkey">
+                    <div class="submit-form">
+                        <input type="submit" value="Shorten" class="submit">
+                    </div>
+		</fieldset>
+	    </form>
+            </div>
+            <div class="footer">
+                <p>©Tim, Sid, Arezu 2013</p>
+            </div>
+	</div>
+	<script 
 src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>
-			function validateForm() {
-				if (validateForm()) {
-					
-				} else {
-					alert("Not filled correctly.");
-				}
-				return false;
-			}
-			function validateForm() {
-				var a=document.forms["bitly"]["url"].value;
-				if (a==null || a=="") {
-					alert("Please specifc a valid URL.");
-					return false;
-				} 
-				var b=document.forms["bitly"]["urlkey"].value;
-				if (b==null || b=="") {
-					alert("Please specify a valid shortener.");
-					return false;
-				} else if(!(/^[a-zA-Z]+$/.test(b))) {
-					alert("Shortener can only contain letters.  Please try again.");
-					return false;
-				}
-				return true;
-			}
-			$(document).ready(function() {
-                                $("#bitly").submit(go);
-                                console.log("ready!");
-                        	});
+	<script>
+	function validateForm() {
+	    var a=document.forms["urlform"]["url"].value;
+	    if (a==null || a=="") {
+	        alert("Please specifc a valid URL.");
+	        return false;
+	    } 
+	
+            var b=document.forms["urlform"]["urlkey"].value;
+	    if (b==null || b=="") {
+	        alert("Please specify a valid shortener.");
+	        return false;
+	    } else if(!(/^[a-zA-Z]+$/.test(b))) {
+	        alert("Shortener can only contain letters.  Please try again.");
+	        return false;
+	    }
+	return true;
+	}
+	$(document).ready(function() { $("#urlform").submit(go);
+                                       console.log("ready!");});
         </script>
     </body>
 </html>

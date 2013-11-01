@@ -1,10 +1,54 @@
 body {
-	background-color: #DDD;
-	}
-.wrapper, .submit {
+	background-color: #FFF;
+}
+
+.wrapper {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+        width: 600px;
+}
+
+.submit-form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 200px;
+}
+
+#logo {
+    float: left;
+    width: 40%;
+    height: 40%;
+}
+
+.header {
+    display: block;  
+}
+
+.content {
+    display: block;
+    clear: both;
+}
+
+.go-back {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    color:#FF0000;
+} 
+
+#final-result {
+    border: 2px;
+    width: 100%;
+}
+
+/* Following style is for the footer of the page*/
+.footer { 
+    color: #777; 
+    border-top: 1px solid #e5e5e5; 
+    font-size: 14px; 
+    text-align: center;
 }
 
 h1, h2 {
@@ -15,6 +59,7 @@ form {
 	width: 100%;
 }
 
+/* Fieldset styles*/
 fieldset {
 	background-color: rgb(243, 243, 243);
 	border: 1px solid rgb(158, 159, 224);
@@ -24,13 +69,15 @@ fieldset {
 	display: block;
 }
 
+/* Legend styles */
 legend {
 	background-color: #333;
 	color: #FFF;
 	padding: 3px 0px;
 	text-indent: 5px;
 	width: 100%;
-	text-align: center
+	text-align: center;
+        font-size: 2em;
 }
 
 /* Label styles */
@@ -48,14 +95,10 @@ input {
 	display: block;
 	text-align: center;
 	float: left;
-	font-size: 3em;
+	font-size: 2em;
 	margin: 3px 0px;
 	width: 100%;
-	height: 70px;
-}
-
-input[type="submit"] {
-	background-color: rgb(243, 243, 243);	
+	height: 40px;
 }
 
 /* Validation styles */

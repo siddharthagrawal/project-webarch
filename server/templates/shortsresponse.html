@@ -1,20 +1,34 @@
-<!DOCTYPE html/>
+<!DOCTYPE html>
 <html>
-        <head>
-                <title>Shorts response</title>
-                <link rel="stylesheet" type="text/css" 
-href="static/css/projectcss.css">
-        </head>
-        <body>
-        	<div>
-                <h2>Congratulations!</h2>
+    <head>
+    	<meta charset="utf-8">
+     	<link rel="stylesheet" type="text/css" href="static/css/projectcss.css">
+        <title>Tim, Sid, and Arezu's killer URL shortener!</title>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+	<div class="wrapper">
+	    <!-- <h1>The Cooler Bitly: Keeping Things <em>Short</em> 
+                   and <em>Simple</em></h1> -->
+            <div class="header">
+                <img src="http://www.leadliaison.com/wp-content/uploads/2013/09/marketing-automation-shortens-sales-cycles.jpg" id="logo">
+                <h1>Keeping it <em>Short</em> & <em>Simple</em>!</h1>
+            </div>
+            <div class="content">
                 <fieldset id="url-result">
-					<legend>Shortener Result</legend>
-                    <p>URL: {{url}}</p>
-                    <p>URL Key: {{urlkey}}</p>
-        		</fieldset>
-    
-        </div>   
-        </body>
+                    <legend>Shortener Result</legend>
+                    <table id="final-result" border="1"> 
+                        <th>Long URL</th><th>Short URL</th>
+                        <tr><td><a href={{url}}>{{url}}</a></td><td> <a href="http://people.ischool.berkeley.edu/~siddharth/server/short/{{urlkey}}">{{urlkey}}</a></td></tr>
+                    </table>
+                    <div class="go-back">
+                        <a href="http://people.ischool.berkeley.edu/~siddharth/server/shorts">Go Back</a>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="footer">
+                <p>©Tim, Sid, Arezu 2013</p>
+            </div>
+	</div>
+    </body>
 </html>
-
